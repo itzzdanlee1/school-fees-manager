@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class schoolss_fees{
+
+    //create scanner object
+    Scanner input = new Scanner(system.in);
+
+    //declaring fixed prices
+    int tuition_fee = 1000;
+    int library_fee = 50;
+    int sports_fee = 50;
+    int house_dues = 0;
+
+    //request for name
+    System.out.println("Please enter name:");
+     String name = input.nextLine();
+    System.out.println("Enter your house, Red,Blue,Green");
+    String House = input.nextLine();
+
+    //determine the house dues 
+    if(House.equalsIgnoreCase("Red")){
+        house_dues = 40;
+    }else if (House.equalsIgnoreCase("Blue")){
+        house_dues = 30;
+    }else if (House.equalsIgnoreCase("Green")){
+        house_dues = 20;
+    } else { 
+        System.out.println("Invalid house entered");
+    }
+    //calculate total fee
+    int total_fee = tuition_fee + library_fee + sports_fee + house_dues;
+
+    //display the results
+    System.out.println("Student Name: " + name);
+    System.out.println("House: " + House);
+    System.out.println("Total School Fee: $" + total_fee);
+}
+
+
